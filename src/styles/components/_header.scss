@@ -1,0 +1,15 @@
+.header {
+    align-items: center;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    text-decoration: none;
+    color: white;
+}
+
+.header__subtitle {
+    color: white;
+}

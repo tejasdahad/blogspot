@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import './styles/styles.scss';
+import 'materialize-css/dist/css/materialize.min.css';
+import BlogState from './context/blog/BlogState';
+import FilterState from './context/filter/FilterState';
+import './firebase/firebase';
+import AppRouter from './routers/AppRouter';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BlogState>
+      <FilterState>
+        <div className="App">
+          <AppRouter />
+        </div>
+        </FilterState>
+      </BlogState>
+
   );
 }
 
