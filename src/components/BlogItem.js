@@ -21,6 +21,9 @@ const BlogItem = () => {
               <span class="card-title"><h2>{current.title}</h2></span>
               <p>{current.body}</p>
             </div>
+            <div className="card-action">
+              <Link to={`/edit/${current.id}`}>Edit blog</Link>
+            </div>
           </div>
         </div>
       </div>
