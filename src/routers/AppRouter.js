@@ -7,12 +7,13 @@ import BlogItem from '../components/BlogItem';
 import Header from '../components/Header';
 import DashboardPage from '../components/DashboardPage';
 import { Router, Switch, Route } from 'react-router-dom';
+import SideNav from '../components/SideNav';
 
 export const history = createBrowserHistory();
 
 const AppRouter = () => {
     return (
-        <div className="container">
+        <div className="image">
             <Router history={history}>
               <Header />
               <Switch>

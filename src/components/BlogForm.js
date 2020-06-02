@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import moment from 'moment';
 import BlogContext from '../context/blog/blogContext';
 
 const BlogForm = (props) => {
@@ -15,6 +16,7 @@ const BlogForm = (props) => {
             setBody(current.body);
         }
         console.log('Rendered');
+        // eslint-disable-next-line
     }, [current]);
     
     const onSubmit = (e) => {
@@ -22,9 +24,11 @@ const BlogForm = (props) => {
         if(title === '' || body === '') {
             setError('Please enter all the fields');
         } else {
+            const date = new Date();
             const blog = {
                 title,
-                body
+                body,
+                date
             };
             props.onSubmit(blog);
             console.log('submitted');
@@ -41,12 +45,22 @@ const BlogForm = (props) => {
     }, []);
 
     return (
-        <form onSubmit={onSubmit}>
-            {error && <p>{error}</p>}
-            <input required placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-            <input required placeholder="Blog" value={body} onChange={(e) => setBody(e.target.value)} />
-            <button>{current ? 'Edit Blog': 'Add Blog' }</button>
-        </form>
+        <div>
+            <form onSubmit={onSubmit} className="form">
+                {error && <p>{error}</p>}
+                <div className="input-field-1">
+                    <h4>Title</h4>
+                    <input className="input-field" required placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                </div>
+                <div className="textarea-1">
+                    <h4>Blog</h4>
+                    <textarea className="materialize-textarea" required placeholder="Blog" value={body} onChange={(e) => setBody(e.target.value)} />
+                </div>
+                <div className="form-button">
+                <button className="btn waves-effect btn-large black waves-purple">{current ? 'Edit Blog': 'Add Blog' }<i class="material-icons right">send</i></button>
+                </div>
+            </form>
+        </div>
     );
 }
 

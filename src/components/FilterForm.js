@@ -9,7 +9,10 @@ const FilterForm = () => {
         setTextFilter(e.target.value);
     }
     return (
-        <input type='text' placeholder='Search Blog' value={text} onChange={onTextChange} />
+        <div class="input-field col s6 filter">
+            <i class="material-icons prefix">search</i>
+            <input type="text" value={text} onChange={onTextChange} className="input-field" placeholder="Search Blog"></input>
+        </div>    
     );
 }
 

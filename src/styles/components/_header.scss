@@ -1,15 +1,40 @@
 .header {
-    align-items: center;
-    background: black;
     display: flex;
-    justify-content: space-between;
+    background: black;
 }
-
+.header__content {
+    margin-bottom: 0;
+}
 .header__title {
     text-decoration: none;
-    color: white;
+    color: black;
+    font-weight: 2000;
+    padding-top: 0;
+    padding-bottom: 1.2rem;
 }
 
 .header__subtitle {
-    color: white;
+    color: grey;
+}
+
+
+.nav-extended {
+    opacity: 0.5;
+    color: black;
+    background-color: lightslategrey;
+}
+
+.nav-wrapper {
+    font-weight: bold;
+    font-size: xx-large;
+    color: lightslategrey;
+    padding-top: 0;
+    padding-bottom: 1.2rem;
+}
+.nav-content {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+.materialize-input {
+    width: 200;
 }

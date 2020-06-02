@@ -1,0 +1,28 @@
+.filter {
+    padding-left: 10rem;
+    padding-right: 12rem;
+    align-items: center;
+    display: flex;
+}
+
+.blogs {
+    max-width: 100rem;
+}
+
+.blogs__title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blog__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog_item__title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.blog_item__subtitle {
+    margin-bottom: 0;
+}
