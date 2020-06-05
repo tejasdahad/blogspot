@@ -34,7 +34,7 @@ const BlogList = () => {
         <div className="content-container">
             <div className="collection with-header">
                 { loading ? <LoadingPage /> : (
-                    blogLi.length === 0 ? <p>No blogs. Add one.</p> :
+                    blogLi.length === 0 ? <p className="white-text center">No blogs. Add one.</p> :
                     (<div>
                         <h2 className="collection-header center blogs__title">Blogs</h2>
                         {blogLi.map((blog) => <BlogListItem key={blog.title} blog={blog} />)}

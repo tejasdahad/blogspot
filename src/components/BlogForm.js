@@ -43,7 +43,7 @@ const BlogForm = (props) => {
             clearCurrent();
         }
     }, []);
-
+    
     return (
         <div>
             <form onSubmit={onSubmit} className="form">

@@ -11,7 +11,7 @@ const FilterForm = () => {
     return (
         <div class="input-field col s6 filter">
             <i class="material-icons prefix">search</i>
-            <input type="text" value={text} onChange={onTextChange} className="input-field" placeholder="Search Blog"></input>
+            <input type="text" value={text} onChange={onTextChange} className="input-field input-field__filter" placeholder="Search Blog"></input>
         </div>    
     );
 }

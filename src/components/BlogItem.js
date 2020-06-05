@@ -7,11 +7,6 @@ const BlogItem = () => {
 
     const { current, clearCurrent } = blogContext;
 
-    useEffect(() => {
-        return () => {
-            clearCurrent();
-        }
-    },[]);
 
     return (
         <div class="row">
